@@ -1,0 +1,107 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url(gautam.jpg);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue; 
+    border-radius: 5px;
+    background: rgb(224, 237, 251, 0.6);
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    width: 80%;
+    max-width: 400px; /* Maximum width for larger screens */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.username,
+.password,
+.button,
+.text {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.username input,
+.password input,
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+button:hover {
+    background: rgb(248, 44, 3);
+    font-weight: bold;
+} 
+
+.text input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.error {
+    width: 100%;
+    height: 20px;
+    background-color: red;
+    color: white;
+    display: none;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.facebook-login,
+.google-login {
+    background-color: #3b5998; /* Facebook blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.facebook-login:hover,
+.google-login:hover {
+    background-color: #2d4373; /* Darker shade of Facebook blue */
+}
+
+/* Media Queries for different screen sizes */
+
+/* For tablets */
+@media (min-width: 600px) {
+    .login {
+        width: 70%;
+    }
+}
+
+/* For laptops and desktops */
+@media (min-width: 992px) {
+    .login {
+        width: 30%;
+    }
+}
+
+/* For large desktops */
+@media (min-width: 1200px) {
+    .login {
+        width: 30%;
+    }
+}

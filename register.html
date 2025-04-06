@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./register.css"/>
+    <style>
+        h1 {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    
+    <form class="center" action="#" onsubmit="return validateForm()">
+        <div class="error" align="center"></div>
+        
+        <h1 align="center"><b>Register</b></h1>
+        <h2 align="center"><b>Register for a personalized experience in your Holiday!</b></h2>
+
+        <div class="register">
+            <div class="field">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Please insert your Fullname"/>
+            </div>
+
+            <div class="field">
+                <label for="password1">Password:</label>
+                <input type="password" id="password1" name="password" placeholder="Strong password"/>
+            </div>
+
+            <div class="field">
+                <label for="password2">Confirm Password:</label>
+                <input type="password" id="password2" name="password" placeholder="Strong password"/>
+            </div>
+
+            <div class="field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Give your email id"/>
+            </div>
+
+            <div class="field">
+                <label for="phone">Phone number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Please give your number"/>
+            </div>
+
+            <div class="field gender">
+                <label for="gender">Gender:</label>
+                <div class="gender-options">
+                    <input type="radio" name="gender" id="male" value="Male"/> <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="Female"/> <label for="female">Female</label>
+                    <input type="radio" name="gender" id="others" value="Others"/> <label for="others">Others</label>
+                </div>
+            </div>
+            
+            <div class="button">
+                <button type="submit">Register</button>
+            </div>
+
+            <div class="link">
+                <p>Already have an account? <a href="./login.html">Login</a></p>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+            var errorDiv = document.querySelector('.error');
+            var errorMessage = '';
+
+            if (name.trim() === '') {
+                errorMessage += "Name is required.<br>";
+            }
+            if (email.trim() === '') {
+                errorMessage += "Email is required.<br>";
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorMessage += "Please enter a valid email address.<br>";
+            }
+            if (phone.trim() === '') {
+                errorMessage += "Phone number is required.<br>";
+            } else if (phone.length !== 10 || isNaN(phone) || !phone.startsWith("98")) {
+                errorMessage += "Phone number should be 10 characters long and start with '98'.<br>";
+            }
+            if (password1.trim() === '') {
+                errorMessage += "Password is required.<br>";
+            } else if (password1 !== password2) {
+                errorMessage += "Passwords do not match.<br>";
+            } else if (password1.length < 8 || !/[A-Z]/.test(password1) || !/[a-z]/.test(password1) || !/[0-9]/.test(password1) || !/[^A-Za-z0-9]/.test(password1)) {
+                errorMessage += "Password must be at least 8 characters long and contain uppercase, lowercase, number, and special character.<br>";
+            }
+
+            errorDiv.innerHTML = errorMessage;
+
+            if (errorMessage !== '') {
+                errorDiv.style.display = "block";
+                return false;
+            } else {
+                errorDiv.style.display = "none";
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

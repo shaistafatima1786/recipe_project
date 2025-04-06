@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="#">FoodRecipes</a> </div>
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./add.html">Add Recipes</a></li>
+        <li><a href="./review.html">Reviews</a></li> 
+        <button><a href="./login.html">Login</a></button>
+        <button><a href="./register.html">Register</a></button>
+      </ul>
+    </div>
+  </nav>
+
+<div class="meal-wrapper">
+    <h2 class="title">Add Your Recipe</h2>
+    <form id="recipe-form" class="input-container">
+      <input type="text" id="recipe-name" class="input" placeholder="Recipe Name" required>
+      <input type="text" id="recipe-category" class="input" placeholder="Category" required>
+      <textarea id="recipe-instructions" class="input" placeholder="Instructions" required></textarea>
+      <input type="text" id="recipe-image" class="input" placeholder="Image URL" required>
+      <input type="text" id="recipe-video" class="input" placeholder="YouTube Video URL (optional)">
+      <button type="submit" class="main-btn">Submit</button>
+    </form>
+</div>
+
+<!-- Add this after the form -->
+<div id="recipe-container" class="recipe-container"></div>
+
+<script src="add.js"></script>
+</body>
+</html>

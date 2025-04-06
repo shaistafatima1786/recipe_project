@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Please</title>
+    <link rel="stylesheet" href="./login.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <form class="login" onsubmit="return validateForm()">
+        <div class="error" align="center"></div> 
+            <h1 align="center"><b>Login Here</b></h1>
+
+            <h2 align="center">  LoginIn for a personalized experience in your Holiday!</h2>
+      
+        <div class="username" align="center">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <label  for="username">Username:</label> <br>
+            <input type="text" id="username" name="username" placeholder="your username please" /><br><br>
+        </div>
+
+        <div class="password" align="center">
+            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="password" /><br><br>
+        </div>
+
+        <div class="remember" align="center" >
+            <input type="checkbox" name="Remember me" id="Remember me" value="Remember password"  />
+            <label  align="center" for="Remember me">Remember me</label><br><br>
+            <a href="#">Forgot Password?</a><br>
+        </div>
+  
+        <div class="button" align="center">
+            <button>Login</button><br><br><br>
+        </div>
+
+        <div class="link" align="center">
+            <p align="center">Don't have an account?
+                <a href="./register.html">Register</a>
+            </p>
+        </div>
+
+        <div class="text" align="center">
+            <i class="fa fa-facebook-official" aria-hidden="true">   </i><input  type="text" placeholder="Sign in with Facebook"><br><br>
+            <i class="fa fa-google" aria-hidden="true">   </i><input  type="text" placeholder="Sign in with Google"><br><br>
+        </div>
+  
+    </form>
+
+    <script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var errorDiv = document.querySelector('.error');
+    
+        if (username.trim() === '' || password.trim() === '') {
+            errorDiv.innerText = "Please enter username and password.";
+            errorDiv.style.display = "block";
+            return false;
+        } else {
+            errorDiv.style.display = "none";
+            return true;
+        }
+    }
+    </script>
+
+
+    
+</body>
+</html>

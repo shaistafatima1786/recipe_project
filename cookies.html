@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cookies Policy</h1>
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <h2>What are cookies?</h2>
+        <p>Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site.</p>
+        <h2>How we use cookies</h2>
+        <p>We use cookies for various purposes including:</p>
+        <ul>
+            <li>Analyzing site traffic and usage patterns</li>
+            <li>Customizing content and advertisements</li>
+            <li>Improving user experience</li>
+        </ul>
+        <h2>Managing cookies</h2>
+        <p>You can control and/or delete cookies as you wish. For details, see <a href="https://www.aboutcookies.org/">aboutcookies.org</a>. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.</p>
+        <div class="btn-container">
+            <button class="btn" onclick="acceptCookies()">Accept Cookies</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            // You can implement your cookie acceptance logic here
+            // For example, set a cookie to record the user's choice
+            document.cookie = "cookies_accepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            // You can also hide the cookie policy message once accepted
+            document.querySelector('.container').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-image: url(gautam.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Wrapper Styles */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Contact Form Styles */
+.contact {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Add some space between sections */
+}
+
+/* Contact Form and Info Header Styles */
+.contact-form h3,
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Input and Textarea Styles */
+input,
+textarea {
+    width: 100%; /* Full width on small screens */
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    color: #333;
+    height: 50px; /* Reduced height for smaller screens */
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Button Styles */
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Contact Info Styles */
+.contact-info p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-info i {
+    color: #4caf50;
+    margin-right: 10px;
+}
+
+/* Map Styles */
+.map {
+    margin-top: 20px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .contact {
+        width: 48%; /* Two columns on tablets and larger */
+    }
+}

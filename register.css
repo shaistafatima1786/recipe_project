@@ -1,0 +1,144 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(gautam.jpg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gender-options input[type="radio"] {
+    margin: 0 5px 0 0;
+}
+
+.gender-options label {
+    margin-right: 15px;
+}
+
+.field.gender label[for="gender"] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.button {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.link {
+    margin-top: 15px;
+}
+
+.link p {
+    margin: 0;
+    text-align: center;
+}
+
+.error {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    display: none;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 599px) {
+    .center {
+        padding: 15px;
+    }
+    .field input {
+        font-size: 14px;
+    }
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+    .center {
+        padding: 20px;
+    }
+    .field input {
+        font-size: 16px;
+    }
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .center {
+        padding: 25px;
+    }
+    .field input {
+        font-size: 16px;
+    }
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .center {
+        padding: 30px;
+    }
+    .field input {
+        font-size: 16px;
+    }
+    button {
+        font-size: 16px;
+    }
+}
